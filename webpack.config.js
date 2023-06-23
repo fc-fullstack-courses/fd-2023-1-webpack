@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // console.log(__dirname);
 // console.log(__filename);
@@ -19,4 +20,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+      template: './index.html'
+    }),
+  ],
 };
