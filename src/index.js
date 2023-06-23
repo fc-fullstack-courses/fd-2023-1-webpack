@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const { MyMath } = require('./MyMath');
+require('./style.css');
 
 console.log(2 + 2);
 
