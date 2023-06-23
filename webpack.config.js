@@ -9,8 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'my_file.js',
+    filename: '[contenthash].js',
     path: path.resolve(__dirname, 'build'),
+    clean: true,
   },
   module: {
     rules: [
@@ -26,4 +27,11 @@ module.exports = {
       template: './index.html'
     }),
   ],
+  devServer: {
+    static: './build',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+  },
+  mode: 'development',
 };

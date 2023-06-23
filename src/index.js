@@ -4,6 +4,6 @@ require('./style.css');
 
 console.log(2 + 2);
 
-const randomNumber = _.random(0, 5000);
+const randomNumber = _.random(0, 5050);
 
 console.log(randomNumber);
